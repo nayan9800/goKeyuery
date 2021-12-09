@@ -1,0 +1,23 @@
+
+
+syntax = "proto3";
+package goKeyuery;
+option go_package = "/protoc/";
+
+message key {
+    string v = 1;
+}
+
+message value {
+    string v = 2;
+}
+
+message keyValue{
+    key key = 1;
+    value value = 2;
+}
+
+service keyvalue {
+    rpc GetValue (key) returns (value);
+    rpc StoreKeyValue (keyValue) returns (value);
+}
