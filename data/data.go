@@ -8,6 +8,7 @@ import (
 	pb "github.com/nayan9800/goKeyuery/protoc"
 )
 
+//TODO: add Redis database
 var (
 	conn *sql.DB
 	err  error
